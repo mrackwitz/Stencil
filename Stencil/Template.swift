@@ -5,6 +5,7 @@ import PathKit
 public class Template {
   public enum Error : ErrorType {
     case TemplateDoesNotExist(name: String, inBundle: NSBundle?)
+    case SwitchVariableValueIsNotStringConvertible(name: String, value: AnyObject)
   }
   
   public let parser:TokenParser

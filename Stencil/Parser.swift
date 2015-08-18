@@ -25,6 +25,7 @@ public class TokenParser {
     registerTag("for", parser: ForNode.parse)
     registerTag("if", parser: IfNode.parse)
     registerTag("ifnot", parser: IfNode.parseIfNot)
+    registerTag("switch", parser: SwitchNode.parse)
     registerTag("now", parser: NowNode.parse)
     registerTag("include", parser: IncludeNode.parse)
     registerTag("extends", parser: ExtendsNode.parse)
