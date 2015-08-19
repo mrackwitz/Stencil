@@ -32,9 +32,22 @@ class IncludeTests: NodeTests {
 
     AssertNoThrow {
       let nodes = try parser.parse()
-      let node = nodes.first as! IncludeNode
       XCTAssertEqual(nodes.count, 1)
+      let node = nodes.first as! IncludeNode
       XCTAssertEqual(node.templateName, "test.html")
+    }
+  }
+  
+  func testParseWithTransformer() {
+    let tokens = [ Token.Block(value: "include \"test.html\" | trim") ]
+    let parser = TokenParser(tokens: tokens)
+    
+    AssertNoThrow {
+      let nodes = try parser.parse()
+      XCTAssertEqual(nodes.count, 1)
+      let node = nodes.first as! IncludeNode
+      XCTAssertEqual(node.templateName, "test.html")
+      XCTAssertEqual(node.transformers.count, 1)
     }
   }
 
@@ -57,6 +70,15 @@ class IncludeTests: NodeTests {
 
   func testRender() {
     let node = IncludeNode(templateName: "test.html")
+    
+    AssertNoThrow {
+      let string = try node.render(Context(dictionary:["loader":loader, "target": "World"]))
+      XCTAssertEqual(string, "\nHello World!\n")
+    }
+  }
+  
+  func testRenderTrimmed() {
+    let node = IncludeNode(templateName: "test.html", transformers: [Transformer.trim()])
     
     AssertNoThrow {
       let string = try node.render(Context(dictionary:["loader":loader, "target": "World"]))
