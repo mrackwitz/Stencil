@@ -1,7 +1,7 @@
 import Foundation
 
 class BlockContext {
-  class var contextKey:String { return "block_context" }
+  static let contextKey = "block_context"
 
   var blocks:[String:BlockNode]
 
