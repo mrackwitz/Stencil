@@ -6,6 +6,7 @@ public class Template {
   public enum Error : ErrorType {
     case TemplateDoesNotExist(name: String, inBundle: NSBundle?)
     case SwitchVariableValueIsNotStringConvertible(name: String, value: AnyObject)
+    case NoBlockInContext
   }
   
   public let parser:TokenParser

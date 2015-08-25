@@ -31,6 +31,7 @@ public class TokenParser {
     registerTag("extends", parser: ExtendsNode.parse)
     registerTag("block", parser: BlockNode.parse)
     registerTag("bind", parser: BindNode.parse)
+    registerTag("yield", parser: YieldNode.parse)
   }
 
   /// Registers a new template tag

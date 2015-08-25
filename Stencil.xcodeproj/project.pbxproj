@@ -33,6 +33,8 @@
 		29279AF31B8C8D3D00A2A586 /* VariableNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279AEA1B8C8D3D00A2A586 /* VariableNodeTests.swift */; };
 		29279AF51B8C900700A2A586 /* BindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279AF41B8C900700A2A586 /* BindNode.swift */; };
 		29279AF71B8C902F00A2A586 /* BindNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279AF61B8C902F00A2A586 /* BindNodeTests.swift */; };
+		29279AF91B8C9A4200A2A586 /* YieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279AF81B8C9A4200A2A586 /* YieldNode.swift */; };
+		29279AFB1B8C9A5100A2A586 /* YieldNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279AFA1B8C9A5100A2A586 /* YieldNodeTests.swift */; };
 		32C6976B95F3D42995990054 /* Pods_Stencil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A574F1600267822AA34CB00 /* Pods_Stencil.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7725B3CB19F92B4F002CF74B /* VariableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7725B3CA19F92B4F002CF74B /* VariableTests.swift */; };
 		7725B3CD19F92B61002CF74B /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7725B3CC19F92B61002CF74B /* Variable.swift */; };
@@ -89,6 +91,8 @@
 		29279AEA1B8C8D3D00A2A586 /* VariableNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableNodeTests.swift; sourceTree = "<group>"; };
 		29279AF41B8C900700A2A586 /* BindNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindNode.swift; sourceTree = "<group>"; };
 		29279AF61B8C902F00A2A586 /* BindNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindNodeTests.swift; sourceTree = "<group>"; };
+		29279AF81B8C9A4200A2A586 /* YieldNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YieldNode.swift; sourceTree = "<group>"; };
+		29279AFA1B8C9A5100A2A586 /* YieldNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YieldNodeTests.swift; sourceTree = "<group>"; };
 		40E4E61A4F4EA12FE3FA6E39 /* Pods_StencilTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StencilTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604897C26D7C87809187940C /* Pods-StencilTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StencilTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StencilTests/Pods-StencilTests.release.xcconfig"; sourceTree = "<group>"; };
 		7725B3CA19F92B4F002CF74B /* VariableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableTests.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				29279ADD1B8C8BD800A2A586 /* SwitchNode.swift */,
 				29279AD51B8C8B6700A2A586 /* TextNode.swift */,
 				29279AD71B8C8B8000A2A586 /* VariableNode.swift */,
+				29279AF81B8C9A4200A2A586 /* YieldNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				29279AE81B8C8D3D00A2A586 /* SwitchNodeTests.swift */,
 				29279AE91B8C8D3D00A2A586 /* TextNodeTests.swift */,
 				29279AEA1B8C8D3D00A2A586 /* VariableNodeTests.swift */,
+				29279AFA1B8C9A5100A2A586 /* YieldNodeTests.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -467,6 +473,7 @@
 				77EB082B19FA8600001870F1 /* Lexer.swift in Sources */,
 				29279AD41B8C8B4700A2A586 /* IfNode.swift in Sources */,
 				7725B3CF19F94214002CF74B /* Tokenizer.swift in Sources */,
+				29279AF91B8C9A4200A2A586 /* YieldNode.swift in Sources */,
 				7725B3D719F94A43002CF74B /* Parser.swift in Sources */,
 				29279ADC1B8C8BA100A2A586 /* ForNode.swift in Sources */,
 				77EB082519F96E88001870F1 /* Template.swift in Sources */,
@@ -489,6 +496,7 @@
 				29279AEE1B8C8D3D00A2A586 /* InheritanceNodesTests.swift in Sources */,
 				77FAAE6519F91E480029DC5E /* StencilTests.swift in Sources */,
 				29279AF21B8C8D3D00A2A586 /* TextNodeTests.swift in Sources */,
+				29279AFB1B8C9A5100A2A586 /* YieldNodeTests.swift in Sources */,
 				7725B3D319F9437F002CF74B /* NodeTests.swift in Sources */,
 				29279AEB1B8C8D3D00A2A586 /* ForNodeTests.swift in Sources */,
 				29279AEF1B8C8D3D00A2A586 /* NowNodeTests.swift in Sources */,
