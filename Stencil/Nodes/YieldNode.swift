@@ -18,16 +18,16 @@ public class YieldNode : Node {
   }
   
   public func render(context: Context) throws -> String {
-    guard let box = context[YieldNode.blockContextKey] as? Box<(Context) -> String> else {
+    guard let box = context[YieldNode.blockContextKey] as? Box<(Context) throws -> String> else {
       throw Template.Error.NoBlockInContext
     }
-    return box.value(context)
+    return try box.value(context)
   }
 }
 
 extension Template {
   /// Renders by setting a closure as yield block.
-  public func call(context: Context, yieldBlock: (Context) -> String) throws -> String {
+  public func call(context: Context, yieldBlock: (Context) throws -> String) throws -> String {
     context.push([YieldNode.blockContextKey : Box(yieldBlock)])
     let result = try render(context)
     context.pop()
