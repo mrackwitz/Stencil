@@ -1,11 +1,11 @@
 use_frameworks!
 
 target 'Stencil' do
-  podspec
+  pod 'PathKit', git: "https://github.com/mrackwitz/PathKit.git", branch: "mr-refactor"
 end
 
 target 'StencilTests' do
-  podspec
+  pod 'PathKit', git: "https://github.com/mrackwitz/PathKit.git", branch: "mr-refactor"
   pod "CatchingFire"
 end
 

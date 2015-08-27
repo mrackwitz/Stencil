@@ -4,7 +4,17 @@ PODS:
 
 DEPENDENCIES:
   - CatchingFire
-  - PathKit (~> 0.3.0)
+  - PathKit (from `https://github.com/mrackwitz/PathKit.git`, branch `mr-refactor`)
+
+EXTERNAL SOURCES:
+  PathKit:
+    :branch: mr-refactor
+    :git: https://github.com/mrackwitz/PathKit.git
+
+CHECKOUT OPTIONS:
+  PathKit:
+    :commit: 65e70da943afec340814a31323951febc9096dfa
+    :git: https://github.com/mrackwitz/PathKit.git
 
 SPEC CHECKSUMS:
   CatchingFire: 935ecc35fc5864f12ef1c033a97e9a9affbf6056
